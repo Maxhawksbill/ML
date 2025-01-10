@@ -13,10 +13,12 @@ print("Median: ", median)
 print("Standard Deviation: ", standard_deviation)
 
 # Replace all the even numbers in the array with 0
-# for i in range(len(random_integers)):
-#     if random_integers[i] % 2 == 0:
-#         random_integers[i] = 0
-# print(random_integers)
+# One way to do this is to loop through the array and replace the even numbers with 0
+for i in range(len(random_integers)):
+    if random_integers[i] % 2 == 0:
+        random_integers[i] = 0
+print(random_integers)
 
-random_integers = [0 if int(x) % 2 == 0 else int(x) for x in random_integers]
+# Another way to do this is to use list comprehension
+random_integers = np.array([0 if int(x) % 2 == 0 else int(x) for x in random_integers])
 print(random_integers)
