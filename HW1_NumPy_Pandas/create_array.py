@@ -22,3 +22,7 @@ print(random_integers)
 # Another way to do this is to use list comprehension
 random_integers = np.array([0 if int(x) % 2 == 0 else int(x) for x in random_integers])
 print(random_integers)
+
+# Another way to do this is to use NumPy vectorization
+random_integers[random_integers % 2 == 0] = 0
+print(random_integers)

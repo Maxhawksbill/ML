@@ -16,3 +16,9 @@ print(df)
 # Filter the DataFrame to show only the rows where the age is greater than 30 and the salary is greater than 70,000
 filtered_df = df[(df['age'] > 30) & (df['salary'] > 70000)]
 print(filtered_df)
+
+# Filter the DataFrame to show only the rows where the age is greater than 30 or the salary is greater than 70,000 using variables
+age_filter = df['age'] > 30
+salary_filter = df['salary'] > 70000
+filtered_df = df[age_filter & salary_filter]
+print(filtered_df)
